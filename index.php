@@ -16,10 +16,17 @@ use Kunnu\Dropbox\Dropbox;
 use Kunnu\Dropbox\DropboxApp;
 use Kunnu\Dropbox\DropboxFile;
 
+
+// Configurar las constantes a continuacion
 define('DB_HOST', 'serverIp');
 define('DB_NAME', 'Database_name');
 define('DB_USER', 'database_username');
 define('DB_PASSWORD', 'database_password');
+define('DROPBOX_CLIENTID', 'Client_id');
+define('DROPBOX_CLIENTSECRET', 'client_secret');
+define('DROPBOX_ACCESSTOKEN', 'access_token');
+//------No es necesario tocar nada a partir de esta línea-------
+
 
 $base_path = 'sql_backups';
 
@@ -57,7 +64,7 @@ $command = 'mysqldump --opt -h ' . DB_HOST . ' -u ' . DB_USER . ' -p\'' . DB_PAS
 $result = shell_exec($command);
 
 //Para crear una app en tu dropbox: https://www.dropbox.com/developers/apps/
-$app = new DropboxApp("Client_id", "client_secret", "access_token");
+$app = new DropboxApp(DROPBOX_CLIENTID, DROPBOX_CLIENTSECRET, DROPBOX_ACCESSTOKEN);
 
 //Configuramos el servicio de Dropbox
 $dropbox = new Dropbox($app);
