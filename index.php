@@ -15,6 +15,7 @@ require_once 'vendor/autoload.php';
 use Kunnu\Dropbox\Dropbox;
 use Kunnu\Dropbox\DropboxApp;
 use Kunnu\Dropbox\DropboxFile;
+use Kunnu\Dropbox\Exceptions\DropboxClientException;
 
 
 // Configurar las constantes a continuacion
