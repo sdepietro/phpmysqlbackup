@@ -3,7 +3,7 @@
 ## Sistema de Backups para MySQL - 04/2018
 ######################################################################
 ## Documentación
-##
+## https://github.com/sdepietro/phpmysqlbackup
 ## -------------------------------------------------------------------
 ## Creado por Sergio De Pietro para www.woopi.com.ar
 ## Es un simple sistema de backups.
